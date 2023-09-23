@@ -1,11 +1,10 @@
 from typing import List, Optional
 
-from facefusion.typing import FaceRecognition, FaceAnalyserDirection, FaceAnalyserAge, FaceAnalyserGender, TempFrameFormat
+from facefusion.typing import FaceRecognition, FaceAnalyserDirection, FaceAnalyserAge, FaceAnalyserGender, TempFrameFormat, OutputVideoEncoder
 
 source_path : Optional[str] = None
 target_path : Optional[str] = None
 output_path : Optional[str] = None
-headless : Optional[bool] = None
 frame_processors : List[str] = []
 ui_layouts : List[str] = []
 keep_fps : Optional[bool] = None
@@ -23,9 +22,11 @@ trim_frame_end : Optional[int] = None
 temp_frame_format : Optional[TempFrameFormat] = None
 temp_frame_quality : Optional[int] = None
 output_image_quality : Optional[int] = None
-output_video_encoder : Optional[str] = None
+output_video_encoder : Optional[OutputVideoEncoder] = None
 output_video_quality : Optional[int] = None
 max_memory : Optional[int] = None
 execution_providers : List[str] = []
 execution_thread_count : Optional[int] = None
 execution_queue_count : Optional[int] = None
+skip_download : Optional[bool] = None
+headless : Optional[bool] = None
